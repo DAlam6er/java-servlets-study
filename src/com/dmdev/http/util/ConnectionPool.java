@@ -58,7 +58,7 @@ public class ConnectionPool
     }
 
     @SneakyThrows
-    public static Connection open()
+    private static Connection open()
     {
         return DriverManager.getConnection(
             PropertiesUtil.get(URL_KEY),

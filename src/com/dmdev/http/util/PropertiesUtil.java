@@ -1,18 +1,18 @@
 package com.dmdev.http.util;
 
 import lombok.SneakyThrows;
-import lombok.experimental.UtilityClass;
 
 import java.util.Properties;
 
-@UtilityClass
-public class PropertiesUtil
+public final class PropertiesUtil
 {
     private static final Properties PROPERTIES = new Properties();
 
     static {
         loadProperties();
     }
+
+    private PropertiesUtil() {throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");}
 
     @SneakyThrows
     private static void loadProperties()
